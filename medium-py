@@ -1,0 +1,19 @@
+print('Welcome to the bank. Here you can add deposits into your bank account. Your current balance is 0 €.')
+balance = 0
+while True:
+    user_input = input('Please enter the amount you want to deposit in €: ')
+    try:
+        user_input = float(user_input)
+    except:
+        print('Wrong input. Please enter amount in €: ')
+        continue
+    else:
+        deposit_amount = balance + user_input
+        balance = deposit_amount
+        print(f'Your current balance is {balance} €')
+        user_descicion = input('Do you want to make another deposit (yes/no)? Answering "no" will exit the bank: ')
+    if user_descicion == 'no':
+        print('You exited the bank.')      
+        break
+    else:
+        continue
